@@ -7,4 +7,8 @@ Movement di godot itu sendiri dan kebanyakan engine itu dipengaruhi oleh Velocit
 Berbeda dengan engine lain, untuk menjalankan velocity dan pemrosesan fisika lain itu menggunakan fungsi bernama `move_and_slide()`. 
 
 ### Smooth
+Pergerakan pada game memang bisa dilakukan dengan hanya velocity dan proses fisika lain. Namun, pada kasus tertentu terasa hambar karena tidak ada berat atau weight dari karakter. Untuk menambahkan smooth itu ada dua cara yang bisa dilakukan 
+1. `move_toward(current, target, delta)` -> mengubah nilai secara linier. Artinya, setiap frame nilainya berubah dengan jumlah yang pasti dan sama sampai mencapai target
+2. `lerp(from, to, weight)` -> mengubah nilai berdasarkan persentase/bobot. Artinya, semakin dekat nilai dengan target, pergerakannya akan semakin lambat.
 
+### Coyote Time & Jump Buffer 
