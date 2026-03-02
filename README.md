@@ -12,3 +12,5 @@ Pergerakan pada game memang bisa dilakukan dengan hanya velocity dan proses fisi
 2. `lerp(from, to, weight)` -> mengubah nilai berdasarkan persentase/bobot. Artinya, semakin dekat nilai dengan target, pergerakannya akan semakin lambat.
 
 ### Coyote Time & Jump Buffer 
+Coyote Time dan Jump Buffer itu sangat erat kaitannya dengan Jump, entah itu di 2D atau 3D dua hal ini itu ada. 
+1. Coyote Time sendiri itu seperti kamu diberikan waktu mengambang diudara dan diizinkan melompat 
