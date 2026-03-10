@@ -23,6 +23,7 @@ extends CharacterBody2D
 var _direction: float = 0
 var _coyote_timer: float = 0
 var _jump_buffer_timer: float = 0
+var sloww : int = 0
 
 func get_direction() -> float:
 	return _direction
@@ -31,6 +32,20 @@ func get_direction() -> float:
 ## sampai game dihentikan
 func _process(_delta: float) -> void:
 	_animation()
+	
+	if Input.is_action_just_pressed("slow"):
+		if sloww == 0:
+			Engine.time_scale = 0.5
+			sloww = 1
+			print("slowdown")
+			speed_mult = 2
+			friction = 160
+		else:
+			Engine.time_scale = 1.0
+			sloww = 0
+			print("ololo")
+			speed_mult = 1
+			friction = 80
 
 ## Fungsi Physics Process digunakan untuk memproses game secara terus menerus juga, namun di fungsi ini
 ## ada tambahan proses fisika (Grivtasi, Velocity, dll)
